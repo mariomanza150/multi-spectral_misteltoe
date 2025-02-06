@@ -41,14 +41,14 @@ Multispectral_Image_Processing_Toolbox/
 For setup and installation instructions, refer to the **[Installation Guide](docs/installation_guide.md)**.
 
 ## **Documentation**
-- **[Project Outline](project_outline.md)**: High-level project objectives, tasks, and expected impact.
-- **[Technical Outline](project_outline_technical.md)**: Detailed breakdown of processing modules, technical considerations, and pipeline workflows.
-- **[General Glossary](glossary.md)**: Definitions of core remote sensing and image processing concepts.
-- **[Technical Glossary](glossary_technical.md)**: Advanced definitions related to spectral analysis and geospatial data.
-- **[Library Reference Guide](librarys.md)**: Overview of Python libraries used in each module.
+- **[Project Outline](project_docs/project_outline.md)**: High-level project objectives, tasks, and expected impact.
+- **[Technical Outline](project_docs/project_outline_technical.md)**: Detailed breakdown of processing modules, technical considerations, and pipeline workflows.
+- **[General Glossary](project_docs/glossary.md)**: Definitions of core remote sensing and image processing concepts.
+- **[Technical Glossary](project_docs/glossary_technical.md)**: Advanced definitions related to spectral analysis and geospatial data.
+- **[Library Reference Guide](project_docs/librarys.md)**: Overview of Python libraries used in each module.
 
 ## **Core Modules**
-Each major component of the toolbox is implemented as a separate module. More details are available in the **[Technical Outline](project_outline_technical.md)**.
+Each major component of the toolbox is implemented as a separate module. More details are available in the **[Technical Outline](project_docs/project_outline_technical.md)**.
 
 ### **1. Data Ingestion & Preprocessing**
 - Organizes files and extracts metadata.
