@@ -1,0 +1,78 @@
+# Define the base directory
+$BaseDir = "./Multispectral_Image_Processing_Toolbox"
+
+# Define directories to create
+$Directories = @(
+    "$BaseDir/project_docs",
+    "$BaseDir/src/data_ingestion",
+    "$BaseDir/src/spectral_calibration",
+    "$BaseDir/src/geometric_alignment",
+    "$BaseDir/src/feature_extraction",
+    "$BaseDir/src/data_storage",
+    "$BaseDir/src/pipeline",
+    "$BaseDir/tests",
+    "$BaseDir/data/raw",
+    "$BaseDir/data/processed",
+    "$BaseDir/data/features",
+    "$BaseDir/notebooks",
+    "$BaseDir/docs",
+    "$BaseDir/scripts"
+)
+
+# Define files to create
+$Files = @(
+    "$BaseDir/project_docs/project_outline.md",
+    "$BaseDir/project_docs/project_outline_technical.md",
+    "$BaseDir/project_docs/project_phased.md",
+    "$BaseDir/project_docs/glossary.md",
+    "$BaseDir/project_docs/glossary_technical.md",
+    "$BaseDir/project_docs/librarys.md",
+    "$BaseDir/src/data_ingestion/file_manager.py",
+    "$BaseDir/src/data_ingestion/metadata_extractor.py",
+    "$BaseDir/src/spectral_calibration/reflectance_calc.py",
+    "$BaseDir/src/spectral_calibration/atmospheric_correction.py",
+    "$BaseDir/src/geometric_alignment/feature_matching.py",
+    "$BaseDir/src/geometric_alignment/georeferencing.py",
+    "$BaseDir/src/feature_extraction/spectral_features.py",
+    "$BaseDir/src/feature_extraction/texture_analysis.py",
+    "$BaseDir/src/data_storage/storage_manager.py",
+    "$BaseDir/src/data_storage/database_handler.py",
+    "$BaseDir/src/pipeline/pipeline_manager.py",
+    "$BaseDir/src/pipeline/logging_config.py",
+    "$BaseDir/src/pipeline/config.yaml",
+    "$BaseDir/tests/test_file_manager.py",
+    "$BaseDir/tests/test_reflectance_calc.py",
+    "$BaseDir/tests/test_feature_matching.py",
+    "$BaseDir/tests/test_feature_extraction.py",
+    "$BaseDir/tests/test_pipeline.py",
+    "$BaseDir/data/metadata.json",
+    "$BaseDir/notebooks/exploratory_analysis.ipynb",
+    "$BaseDir/notebooks/reflectance_comparison.ipynb",
+    "$BaseDir/notebooks/feature_engineering.ipynb",
+    "$BaseDir/docs/installation_guide.md",
+    "$BaseDir/docs/usage_guide.md",
+    "$BaseDir/docs/developer_guide.md",
+    "$BaseDir/docs/faq.md",
+    "$BaseDir/scripts/setup.py",
+    "$BaseDir/scripts/run_pipeline.sh",
+    "$BaseDir/README.md",
+    "$BaseDir/requirements.txt",
+    "$BaseDir/LICENSE",
+    "$BaseDir/.gitignore"
+)
+
+# Create directories
+foreach ($Dir in $Directories) {
+    if (!(Test-Path -Path $Dir)) {
+        New-Item -ItemType Directory -Path $Dir -Force | Out-Null
+    }
+}
+
+# Create empty files
+foreach ($File in $Files) {
+    if (!(Test-Path -Path $File)) {
+        New-Item -ItemType File -Path $File -Force | Out-Null
+    }
+}
+
+Write-Host "Project structure created successfully at $BaseDir" -ForegroundColor Green
